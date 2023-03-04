@@ -57,7 +57,7 @@ We follow the project of [3D-Sketch](https://github.com/charlesCXK/TorchSSC) for
 
 ````
 -- your_SSC_Dataset
-   |-- NYU
+   | NYU
    |-- TSDF
    |-- Mapping
    |   |-- trainset
@@ -68,7 +68,7 @@ We follow the project of [3D-Sketch](https://github.com/charlesCXK/TorchSSC) for
    |   |-- |-- RGB
    |   |-- |-- depth
    |   |-- |-- GT
-   |-- NYUCAD
+   | NYUCAD
    |-- TSDF
    |   |-- trainset
    |   |-- |-- depth
