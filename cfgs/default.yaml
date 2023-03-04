@@ -1,0 +1,91 @@
+# distributed
+dist_url: tcp://localhost:8888
+dist_backend: 'nccl'
+multiprocessing_distributed: False
+ngpus_per_node: 1
+world_size: 1
+launcher: 'mp'
+local_rank: 0
+
+use_gpu: True
+seed: null
+
+# ---------------------------------------------------------------------------- #
+# Training cfgs
+# ---------------------------------------------------------------------------- #
+
+deterministic: False
+sync_bn: False
+
+layer_decay: 0 # no layer decay by default
+
+step_per_update: 1
+start_epoch: 1
+sched_on_epoch: True
+
+# ---------------------------------------------------------------------------- #
+# io and misc
+# ---------------------------------------------------------------------------- #
+resume: False
+test: False
+finetune: False
+
+mode: train # set to test in evaluation only mode
+logname: null
+load_path: null
+
+print_freq: 50
+
+root_dir: log/
+pretrained_path: null
+
+
+# ---------------------------------------------------------------------------- #
+# data
+# ---------------------------------------------------------------------------- #
+dataset:
+  common:
+    NAME: NYU
+    data_root: /path-to/1-Dataset/SSC/NYU
+  train:
+    split: train
+  val:
+    split: test
+  test:
+    split: test
+
+num_classes: 12
+batch_size: 2
+val_batch_size: 1
+
+dataloader:
+  num_workers: 6
+#
+
+# ---------------------------------------------------------------------------- #
+# Training cfgs
+# ---------------------------------------------------------------------------- #
+val_fn: validate
+ignore_index: null 
+epochs: 100
+
+criterion:
+  NAME: CrossEntropy
+  ignore_index: 255
+  label_smoothing: 0.2
+
+optimizer:
+ NAME: 'adamw'  # performs 1 point better than adam
+ weight_decay: 0.05
+
+# lr_scheduler:
+sched: cosine
+warmup_epochs: 0
+
+min_lr: 1.0e-7 #
+lr: 0.001 # LR linear rule. 0.002 for 32 batches
+
+grad_norm_clip: 10
+save_freq: -1 # save epoch every xxx epochs, -1 only save last and best. 
+val_freq: 1
+
