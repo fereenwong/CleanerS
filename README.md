@@ -1,12 +1,16 @@
-# CleanerS: Semantic Scene Completion with Cleaner Self
+# CleanerS 
+
+This repository contains the official PyTorch implementation of the following CVPR 2023 paper:
+
+**CleanerS: Semantic Scene Completion with Cleaner Self**
 
 [Fengyun Wang](https://fereenwong.github.io/), [Dong Zhang](https://dongzhang89.github.io/), [Hanwang Zhang](https://personal.ntu.edu.sg/hanwangzhang/), [Jinhui Tang](https://scholar.google.com/citations?user=ByBLlEwAAAAJ&hl=zh-CN), [Qianru Sun](https://qianrusun.com/)
 
-[IMAG Lab](https://imag-njust.net/), Nanjing University of Science and Technology
+Nanjing University of Science and Technology
 
 ---
 
-[![GitHub Stars](https://img.shields.io/github/stars/fereenwong/CleanerS?style=social)](https://github.com/fereenwong/CleanerS)  ![visitors](https://visitor-badge.glitch.me/badge?page_id=fereenwong/CleanerS)  [![arXiv](https://img.shields.io/badge/arXiv-Paper-.svg)]()  ![update](https://badges.strrl.dev/updated/fereenwong/CleanerS)
+[![GitHub Stars](https://img.shields.io/github/stars/fereenwong/CleanerS?style=social)](https://github.com/fereenwong/CleanerS)  ![visitors](https://visitor-badge.glitch.me/badge?page_id=fereenwong/CleanerS) ![update](https://badges.strrl.dev/updated/fereenwong/CleanerS)
 
 ---
 
