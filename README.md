@@ -2,7 +2,7 @@
 
 This repository contains the official PyTorch implementation of the following CVPR 2023 paper:
 
-**Title: CleanerS: Semantic Scene Completion with Cleaner Self**
+Title: **CleanerS: Semantic Scene Completion with Cleaner Self**
 
 Author: [Fengyun Wang](https://fereenwong.github.io/), [Dong Zhang](https://dongzhang89.github.io/), [Hanwang Zhang](https://personal.ntu.edu.sg/hanwangzhang/), [Jinhui Tang](https://scholar.google.com/citations?user=ByBLlEwAAAAJ&hl=zh-CN), [Qianru Sun](https://qianrusun.com/)
 
@@ -35,7 +35,7 @@ CleanerS mainly soncists of two networks: a teacher network, and a student netwo
 - mmcv 1.5.0
 - mmsegmentation 0.27.0
 
-The suggested installation steps are:
+#### Suggested installation steps:
 
 ```angular2html
 conda create -n CleanerS python=3.7 -y
@@ -49,7 +49,9 @@ pip install pyyaml timm tqdm EasyConfig multimethod easydict termcolor shortuuid
 
 #### Data preparation
 
-We follow the project of [3D-Sketch](https://github.com/charlesCXK/TorchSSC) for dataset preparing. After preparing, `your_SSC_Dataset` folder should look like this:
+We follow the project of [3D-Sketch](https://github.com/charlesCXK/TorchSSC) for dataset preparing. 
+
+After preparing, `your_SSC_Dataset` folder should look like:
 
 ````
 -- your_SSC_Dataset
