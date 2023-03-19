@@ -15,7 +15,7 @@ Semantic Scene Completion (SSC) transforms an image of single-view depth and/or 
 ## Overall architecture
 ![image](./figs/framework.png)
 <p align="justify">
-CleanerS mainly soncists of two networks: a teacher network, and a student network. These two networks share same architectures but have different weights. The distillation pipelines include a feature-based cleaner surface distillation (i.e., KD-T), and logit-based cleaner semantic distillations (i.e., KD-SC and KD-SA). The dimensions of the inputs and outputs in the student network are omitted as they are the same as in the teacher network.
+CleanerS mainly soncists of two networks: a teacher network, and a student network. These two networks share same architectures but have different weights. The distillation pipelines include a feature-based cleaner surface distillation (i.e., KD-T), and logit-based cleaner semantic distillations (i.e., KD-SC and KD-SA).
 
 ## Pre-trained model
 | Segformer-B2      |                    Model Zoo                    |                 Visual Results                 |
