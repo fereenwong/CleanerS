@@ -8,17 +8,14 @@ This repository contains the official PyTorch implementation of the following CV
 
 NJUST, HKUST, NTU, SMU
 
----
+## Abstract
+<p align="justify">
+Semantic Scene Completion (SSC) transforms an image of single-view depth and/or RGB 2D pixels into 3D voxels, each of whose semantic labels are predicted. SSC is a well-known ill-posed problem as the prediction model has to "imagine" what is behind the visible surface, which is usually represented by Truncated Signed Distance Function (TSDF). Due to the sensory imperfection of the depth camera, most existing methods based on the noisy TSDF estimated from depth values suffer from 1) incomplete volumetric predictions and 2) confused semantic labels. To this end, we use the ground-truth 3D voxels to generate a perfect visible surface, called TSDF-CAD, and then train a "cleaner" SSC model. As the model is noise-free, it is expected to focus more on the ``imagination'' of unseen voxels. Then, we propose to distill the intermediate "cleaner" knowledge into another model with noisy TSDF input. In particular, we use the 3D occupancy feature and the semantic relations of the "cleaner self" to supervise the counterparts of the "noisy self" to respectively address the above two incorrect predictions. Experimental results validate that our method improves the noisy counterparts with 3.1% IoU and 2.2% mIoU for measuring scene completion and SSC, and also achieves new state-of-the-art accuracy on the popular NYU dataset.
 
-[![GitHub Stars](https://img.shields.io/github/stars/fereenwong/CleanerS?style=social)](https://github.com/fereenwong/CleanerS)  ![visitors](https://visitor-badge.glitch.me/badge?page_id=fereenwong/CleanerS) ![update](https://badges.strrl.dev/updated/fereenwong/CleanerS)
-
----
-
-<p align="center">
-  <img width="800" src="./figs/framework.png">
-</p>
-
-Overall architecture of our proposed CleanerS, consisting of two networks: a teacher network, and a student network. The two networks share same architectures but have different weights. The distillation pipelines include a feature-based cleaner surface distillation (*i.e.*, *KD-T*), and logit-based cleaner semantic distillations (*i.e.*, *KD-SC* and *KD-SA*). The dimensions of the inputs and outputs in the student network are omitted as they are the same as in the teacher network.
+## The overall architecture
+<p align="center"><img width="800" src="./figs/framework.png"></p>
+<p align="justify">
+CleanerS soncists of two networks: a teacher network, and a student network. These two networks share same architectures but have different weights. The distillation pipelines include a feature-based cleaner surface distillation (*i.e.*, *KD-T*), and logit-based cleaner semantic distillations (*i.e.*, *KD-SC* and *KD-SA*). The dimensions of the inputs and outputs in the student network are omitted as they are the same as in the teacher network.
 
 #### Pre-trained model
 
