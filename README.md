@@ -15,24 +15,21 @@ Semantic Scene Completion (SSC) transforms an image of single-view depth and/or 
 ## The overall architecture
 <p align="center"><img width="800" src="./figs/framework.png"></p>
 <p align="justify">
-CleanerS soncists of two networks: a teacher network, and a student network. These two networks share same architectures but have different weights. The distillation pipelines include a feature-based cleaner surface distillation (*i.e.*, *KD-T*), and logit-based cleaner semantic distillations (*i.e.*, *KD-SC* and *KD-SA*). The dimensions of the inputs and outputs in the student network are omitted as they are the same as in the teacher network.
+CleanerS soncists of two networks: a teacher network, and a student network. These two networks share same architectures but have different weights. The distillation pipelines include a feature-based cleaner surface distillation (i.e., KD-T), and logit-based cleaner semantic distillations (i.e., KD-SC and KD-SA). The dimensions of the inputs and outputs in the student network are omitted as they are the same as in the teacher network.
 
-#### Pre-trained model
-
-
+## Pre-trained model
 | Segformer-B2      |                    Model Zoo                    |                 Visual Results                 |
 | :------------------ | :-----------------------------------------------: | :-----------------------------------------------: |
 | Teacher Model     | [Google Drive](https://drive.google.com/file/d/1e8GZRFLMUM9WLoDm3GITJ6YV8solWMfk/view?usp=sharing) / [Baidu Netdisk](https://pan.baidu.com/s/1bc6ODl6VIjRBwgQ7wwypnA?pwd=3gew) with code:3gew | [Google Drive](https://drive.google.com/file/d/1jFCzMBj4l8itpDWzSgXaI8c4kYZlsrLX/view?usp=sharing) / [Baidu Netdisk](https://pan.baidu.com/s/1snrfT0BCX4JiW2hC6pYJnw?pwd=p9nl) with code:p9nl |
 | **Student Model** | [Google Drive](https://drive.google.com/file/d/1LyUAPq4WaB-PxyrPZ0L33_a3aKgMK5aW/view?usp=sharing) / [Baidu Netdisk](https://pan.baidu.com/s/1puxavCn3nUr-eguJiqBdDw?pwd=6eja) with code:6eja | [Google Drive](https://drive.google.com/file/d/15jlkRQRp142zmoG7KREB5dBbLDufTqd8/view?usp=sharing) / [Baidu Netdisk](https://pan.baidu.com/s/1Sn0Iq3tEHxcFOG78Vg_6nQ?pwd=lktg) with code:lktg |
 
-#### Comparison with SOTA
+## Comparison with SOTA
 <p align="center">
   <img width="800" src="./figs/Comparison-tab.png">
 </p>
 
-
+## Usage
 #### Requirements
-
 (A lower/higher vision may also workable)
 
 > - Pytorch 1.10.1
@@ -96,18 +93,16 @@ We follow the project of [3D-Sketch](https://github.com/charlesCXK/TorchSSC) for
 2. Run ``python test_NYU.py --pretrained_path ./checkpoint/CleanerS_ckpt.pth``. The visualized results will be in the `./visual_pred/CleanerS` folder.
 3. (optional) Run ``python test_NYU.py --pretrained_path ./checkpoint/Teacher_ckpt.pth`` to get the results of the teacher model.
 
-#### Citation
+## Citation
 If this work is helpful for your research, please consider citing the following BibTeX entry.
 ```
 citation
 ```
 
-#### TODO
+## TODO list
 - [ ] BibTeX for citation
 - [ ] arixv link of the paper
 - [ ] switchable 2DNet for both Segformer-B2 and ResNet50
 
 #### Acknowledgement
 This code is based on [3D-Sketch](https://github.com/charlesCXK/TorchSSC). 
-
-Thanks for this awesome work.
