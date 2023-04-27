@@ -2,7 +2,7 @@
 
 This repository contains the official PyTorch implementation of the following CVPR 2023 paper:
 
-Title: [**CleanerS: Semantic Scene Completion with Cleaner Self**](https://arxiv.org/pdf/2303.09977.pdf)
+Title: **CleanerS: Semantic Scene Completion with Cleaner Self**   [PDF](https://arxiv.org/pdf/2303.09977.pdf)
 
 Author: [Fengyun Wang](https://fereenwong.github.io/), [Dong Zhang](https://dongzhang89.github.io/), [Hanwang Zhang](https://personal.ntu.edu.sg/hanwangzhang/), [Jinhui Tang](https://scholar.google.com/citations?user=ByBLlEwAAAAJ&hl=zh-CN), [Qianru Sun](https://qianrusun.com/)
 
