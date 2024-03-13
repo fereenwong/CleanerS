@@ -94,12 +94,16 @@ After preparing, `your_SSC_Dataset` folder should look like:
 ## Citation
 If this work is helpful for your research, please consider citing:
 ```
-citation
+@inproceedings{wang2023semantic,
+  title={Semantic scene completion with cleaner self},
+  author={Wang, Fengyun and Zhang, Dong and Zhang, Hanwang and Tang, Jinhui and Sun, Qianru},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={867--877},
+  year={2023}
+}
 ```
 
 ## TODO list
-- [ ] BibTeX for citation
-- [ ] arixv link of the paper
 - [ ] switchable 2DNet for both Segformer-B2 and ResNet50
 
 ## Acknowledgement
